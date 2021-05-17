@@ -1,0 +1,107 @@
+.site {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 30px auto;
+  width: 448px;
+
+  .site_item {
+    width: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 400;
+    box-sizing: border-box;
+    padding: 0 0 10px 0;
+    position: relative;
+
+    &:hover {
+      background-color: #e2e2e4;
+      border-radius: 4px;
+      cursor: pointer;
+
+      .site_item_tree_dots {
+        display: block;
+      }
+    }
+
+    .site_item_tree_dots {
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px;
+      color: #71777c;
+      box-sizing: content-box;
+    }
+
+    .site_item_tree_dots_popover_overlay {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 100;
+    }
+
+    .site_item_tree_dots_popover {
+      z-index: 200;
+      display: none;
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 6px 0;
+      box-sizing: content-box;
+      background: #fff;
+      box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+      border-radius: 4px;
+
+      & > div {
+        white-space: nowrap;
+        padding: 4px 24px;
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+
+    .site_icon {
+      width: 24px;
+      height: 24px;
+      background-color: #377153;
+      border-radius: 50%;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .site_item_img {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      background-color: #edf0f1;
+      border-radius: 50%;
+      margin-top: 16px;
+
+      .add_icon {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .site_item_name {
+      margin-top: 6px;
+      padding: 2px 8px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 96px;
+    }
+  }
+}

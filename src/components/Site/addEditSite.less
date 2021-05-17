@@ -1,0 +1,53 @@
+@normal-color: rgb(95, 99, 104);
+@error-color: rgb(217, 48, 37);
+
+.add_edit_site {
+  .input_item {
+    padding: 0 0 20px 0;
+
+    label {
+      display: block;
+      color: @normal-color;
+      font-size: 12px;
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    input {
+      background-color: rgb(241, 243, 244);
+      color: @normal-color;
+      font-size: 13px;
+      border-radius: 2px;
+      width: 100%;
+      height: 27px;
+      padding: 6px 8px;
+      outline: none;
+
+      &:focus {
+        border-bottom: 2px solid rgb(26, 115, 232);
+        outline: none;
+      }
+    }
+
+    p {
+      font-size: 12px;
+      margin: 8px 0;
+    }
+
+    &.error {
+      label {
+        color: @error-color;
+      }
+
+      input {
+        &:focus {
+          border-bottom-color: @error-color;
+        }
+      }
+
+      p {
+        color: @error-color;
+      }
+    }
+  }
+}
