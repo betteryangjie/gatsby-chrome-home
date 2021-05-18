@@ -66,7 +66,10 @@ function SiteItem({ site, index, setModal, setSiteItem }) {
           setTreeDotsPopover(true)
         }}
       />
-      {isShowTreeDotsPopover && <div className="site_item_tree_dots_popover_overlay" />}
+      {isShowTreeDotsPopover && <div className="site_item_tree_dots_popover_overlay" onClick={(e) => {
+        e.stopPropagation()
+        setTreeDotsPopover(false)
+      }}/>}
       {isShowTreeDotsPopover && (
         <div
           className="site_item_tree_dots_popover"
